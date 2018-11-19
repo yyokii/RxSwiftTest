@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="RxSwiftSample" customModuleProvider="target">
+            <connections>
+                <outlet property="countDownButton" destination="t4k-3v-7WC" id="h2q-5o-Cfo"/>
+                <outlet property="countLabel" destination="dbg-pl-o8G" id="KdV-YF-GWS"/>
+                <outlet property="countResetButton" destination="hdb-5S-69a" id="P6M-J4-WiD"/>
+                <outlet property="countUpButton" destination="UWy-zX-zch" id="ims-gW-K89"/>
+                <outlet property="progressView" destination="hJ8-oF-5MC" id="KZU-Ez-OJU"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Ocn-IW-YHG"/>
+                <outlet property="webView" destination="K48-95-Amq" id="P2e-wq-CaK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWy-zX-zch">
+                    <rect key="frame" x="156" y="360" width="62" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="CountUP"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4k-3v-7WC">
+                    <rect key="frame" x="147" y="415" width="81" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="CountDown"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdb-5S-69a">
+                    <rect key="frame" x="168" y="477" width="39" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Reset"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-pl-o8G">
+                    <rect key="frame" x="10" y="323" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K48-95-Amq">
+                    <rect key="frame" x="0.0" y="52" width="375" height="261"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hJ8-oF-5MC">
+                    <rect key="frame" x="20" y="30" width="335" height="2"/>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dbg-pl-o8G" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3p8-ai-lIu"/>
+                <constraint firstItem="dbg-pl-o8G" firstAttribute="top" secondItem="K48-95-Amq" secondAttribute="bottom" constant="10" id="5xg-2I-RLp"/>
+                <constraint firstAttribute="trailing" secondItem="hJ8-oF-5MC" secondAttribute="trailing" constant="20" id="EbX-Uw-gFq"/>
+                <constraint firstItem="hJ8-oF-5MC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Ic3-Ea-n7S"/>
+                <constraint firstItem="dbg-pl-o8G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="K8X-Ja-N8c"/>
+                <constraint firstItem="K48-95-Amq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PIC-eS-P0q"/>
+                <constraint firstItem="K48-95-Amq" firstAttribute="top" secondItem="hJ8-oF-5MC" secondAttribute="bottom" constant="20" id="TN9-js-xaM"/>
+                <constraint firstItem="dbg-pl-o8G" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="WwD-Yj-1xa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dbg-pl-o8G" secondAttribute="trailing" constant="10" id="ZzT-b6-OKN"/>
+                <constraint firstItem="K48-95-Amq" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gor-w3-vuz"/>
+                <constraint firstItem="hJ8-oF-5MC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="qty-du-xQB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
